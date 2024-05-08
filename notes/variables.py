@@ -9,7 +9,7 @@
 # - don't use __
 # - name things well so that your code runs like English
 
-a,b,c = 1,2,3
+a, b, c = 1, 2, 3
 print(a)
 print(b)
 print(c)

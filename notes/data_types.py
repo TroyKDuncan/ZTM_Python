@@ -1,6 +1,6 @@
 # Fundamental data types
 
-##### int and float
+# int and float
 
 # print(2 + 6) #int
 # print(2 - 6) #int
@@ -23,7 +23,7 @@
 
 # floats take up more space than ints
 
-##### strings are immutable, the only way to  change it is to reassign
+# strings are immutable, the only way to  change it is to reassign
 
 # print(type("hi"))
 # username = 'me'
@@ -61,7 +61,7 @@
 # quote = quote.strip()
 # print(quote)
 
-##### bools are True or False, nonzero or 0 respectively
+# bools are True or False, nonzero or 0 respectively
 
 # name = 'Troy'
 # is_cool = False
@@ -71,7 +71,7 @@
 # print(bool(90))
 # print(bool(0))
 
-### list, our first Data Structure
+# list, our first Data Structure
 
 # li = [1,2,3,4,5]
 # li2 = ['a','b','c']
@@ -201,7 +201,7 @@
 # dictionary = {
 #   'a': [1,2,3],     # keys must be immutable data types, which excludes dictionaries and lists
 #   2: 'Hello',       # 95% of the time, keys are descriptive strings or numbers
-#   '[1,2,3]': True   # keys must be unique, else they overwrite each other 
+#   '[1,2,3]': True   # keys must be unique, else they overwrite each other
 # }
 # print(dictionary['[1,2,3]']) # returns True
 

@@ -19,18 +19,18 @@
 #   username = input('Enter a username: ')
 #   password = input('Enter a password: ')
 #   print()
-  
+
 #   if username and password:
 #     hidden_password = '*' * len(password)
 #     invalid = False
 #     print(f'Hi {username}, your password is: {hidden_password}\n')
-    
+
 #   elif username and (not password):
 #     print(f'Hi {username}, you need a valid password.\n')
-    
+
 #   elif (not username) and password:
 #     print(f'Hi there, you need a username.\n')
-    
+
 #   else:
 #     print(f'Hi there, you need a username and a password.\n')
 
@@ -196,7 +196,7 @@
 
 ### *args and **kwargs ###
 
-# def super_func(*args, **kwargs): # these can be anything, but this is the standard 
+# def super_func(*args, **kwargs): # these can be anything, but this is the standard
 #   print(*args) # returns each one individually
 #   print(args) # returns a tuple of all arguments
 #   print(kwargs) # returns a dictionary with keywords as keys and values as values
@@ -223,7 +223,7 @@
 ### Scope ###
 
 # defining functions creates a new scope that has access to itself
-# interpreter starts with checking local, then checks the parent local up to global, and then built-ins 
+# interpreter starts with checking local, then checks the parent local up to global, and then built-ins
 
 # parameters are local variables
 
