@@ -1,19 +1,20 @@
 # OOP is a paradigm
 
-# class BigObject:  # camel case convention
-#     pass
+class BigObject:  # camel case convention
+    pass
 
 
-# obj1 = BigObject()
-# print(type(None))
-# print(type(True))
-# print(type(5))
-# print(type(5.5))
-# print(type('hey'))
-# print(type([]))
-# print(type(()))
-# print(type({}))
-# print(type(obj1))
+obj1 = BigObject()
+print(type(None))
+print(type(True))
+print(type(5))
+print(type(5.5))
+print(type('hey'))
+print(type([]))
+print(type(()))
+print(type({}))
+print(type(obj1))
+
 
 class PlayerCharacter:  # singular
 
@@ -37,7 +38,7 @@ class PlayerCharacter:  # singular
     @classmethod
     def adding_stuff(cls, *args):
         return cls('Buddy', sum(args))
-    
+
     # static methods don't give access to the class
     @staticmethod
     def adding_stuff2(*args):
@@ -64,6 +65,6 @@ player3 = PlayerCharacter()
 print(player3.name, player3.age)
 
 # you can instantiate with classmethods if you use cls
-player4 = PlayerCharacter.adding_stuff(1,2,3,4,5,6,7,8,9)
+player4 = PlayerCharacter.adding_stuff(1, 2, 3, 4, 5, 6, 7, 8, 9)
 print(player4.age, player4.name)
-print(PlayerCharacter.adding_stuff2(3,2,3,4,2,3,4,5))
+print(PlayerCharacter.adding_stuff2(3, 2, 3, 4, 2, 3, 4, 5))
