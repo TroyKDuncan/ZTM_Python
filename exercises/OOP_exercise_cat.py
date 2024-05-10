@@ -1,6 +1,7 @@
-#Given the below class:
+# Given the below class:
 class Cat:
     species = 'mammal'
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
@@ -13,6 +14,8 @@ cat3 = Cat('Mr. Whiskers', 46)
 
 # 2 Create a function that finds the oldest cat
 cat_list = [cat1, cat2, cat3]
+
+
 def find_oldest_cat(cats):
     oldest_cat = cats[0]  # initialize to first cat in the list
     for cat in cats:
@@ -20,5 +23,19 @@ def find_oldest_cat(cats):
             oldest_cat = cat
     return oldest_cat
 
+
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
 print(f'The oldest cat is {find_oldest_cat(cat_list).age} years old')
+print()
+
+# That was fine, but I should have used *args and the max function instead of forcing it to be a list:
+
+
+def oldest_cat(*args):
+    return max(args)  # remember, this is a tuple
+
+
+print(
+    f'The oldest cat is {oldest_cat(cat1.age, cat2.age, cat3.age)} years old')
+
+# The second solution is MUCH cleaner and is more dynamic
