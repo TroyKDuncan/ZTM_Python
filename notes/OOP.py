@@ -32,6 +32,17 @@ class PlayerCharacter:  # singular
     def shout(self):
         print(f'Hi, my name is {self.name}')
 
+    # Class Methods tagged like this can be used outside of an instantiation
+    # cls stands for Class and allows you to instantiate
+    @classmethod
+    def adding_stuff(cls, *args):
+        return cls('Buddy', sum(args))
+    
+    # static methods don't give access to the class
+    @staticmethod
+    def adding_stuff2(*args):
+        return sum(args)
+
 
 player1 = PlayerCharacter('Joe', 45)
 player2 = PlayerCharacter('Troy', 29)
@@ -51,3 +62,8 @@ player2.shout()
 # because nothing was passed, defaults in the constructor are used
 player3 = PlayerCharacter()
 print(player3.name, player3.age)
+
+# you can instantiate with classmethods if you use cls
+player4 = PlayerCharacter.adding_stuff(1,2,3,4,5,6,7,8,9)
+print(player4.age, player4.name)
+print(PlayerCharacter.adding_stuff2(3,2,3,4,2,3,4,5))
