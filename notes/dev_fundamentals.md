@@ -35,3 +35,8 @@ character = {
   - readability, easy to understand, variable names help instead of hurt
   - predictability, nothing too fancy
   - DRY, dont repeat yourself (use functions for reusablility)
+
+5. Test your assumptions
+  - try things to test what you are learning
+  - don't just watch the videos; try things and see how they work
+
