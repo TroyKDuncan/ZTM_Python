@@ -137,7 +137,9 @@ print(isinstance(wizard1, object))
     - different subclasses can share method names with different outputs
 '''
 
-
+# this is a great example of why polymorphism exists
+# there might be multiple classes that inherit, but do different things
+# both the wizard and the archer attack, but they do it in different ways
 def player_attack(character):
     character.attack()
 
@@ -193,19 +195,24 @@ class Hybrd(Archer, Wizard):
     - you have to be careful because you have to make sure things don't get tangled
 '''
 
-### Method Resolution Order
+# Method Resolution Order
+
 
 class A:
     num = 10
 
+
 class B(A):
     pass
+
 
 class C(A):
     num = 1
 
+
 class D(B, C):
     pass
+
 
 print(D.num)
 print(D.mro())
