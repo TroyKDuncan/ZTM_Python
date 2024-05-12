@@ -11,6 +11,9 @@
 # It doesn't change what is passed, it doesn't print anything, etc.
 
 
+from functools import reduce
+
+
 def multiply_by2(li):
     new_list = []
     for item in li:
@@ -51,9 +54,9 @@ def multiply_by2(li):
 multiply_by2([1, 2, 3, 4])
 
 # Map function
-
 # map() takes two inputs, a function and an iterable and performs the function on
 # everything in the iterable
+print()
 
 my_list = [1, 2, 3, 4]
 
@@ -67,6 +70,7 @@ print(list(map(multiply_by2, my_list)))  # this typecasts it into a list
 print(my_list)  # notice my_list isn't affected, so it stays pure
 
 # Filter Function
+print()
 
 
 def only_odd(item):
@@ -80,10 +84,75 @@ print(list(filter(only_odd, my_list)))  # must be typecast
 print(list(filter(only_odd, map(multiply_by2, my_list))))
 print(my_list)
 
-# Zip Function
+# Zip Function - returns tuples of indeces
+# for example: list(zip([1,2,3], [10,20,30])) -> [(1,10),(2,20),(3,30)]
+# dicts: use .keys(), .values(), or .items() to specify what to return
+# .items() returns tuples of key: value pairs
+print()
 
-my_list = [1,2,3,4]
-your_list = [10,20,30,40]
+my_list = [1, 2, 3, 4]
+your_dict = {
+    'me': 1,
+    'you': 2,
+    'them': 3
+}
+their_tuple = (5, 10, 15)
 
-print(zip(my_list, your_list))  # return a zip object
-print(list(zip(my_list, your_list)))
+print(zip(my_list, your_dict, their_tuple))  # return a zip object
+print(list(zip(my_list, your_dict, their_tuple)))
+print(list(zip(my_list, your_dict.keys(), their_tuple)))
+print(list(zip(my_list, your_dict.values(), their_tuple)))
+print(list(zip(my_list, your_dict.items(), their_tuple)))
+
+
+# Reduce Function
+print()
+
+
+# this one is complicated, but here are some examples:
+
+# summing contents of a list:
+
+def add(a, b):
+    return a + b
+
+
+numbers = [1, 2, 3, 4, 5]
+total = reduce(add, numbers)
+print(total)
+
+# finding max or min:
+
+
+def max(a, b):
+    if a > b:
+        return a
+    else:
+        return b
+
+
+numbers = [1, 2, 3, 4, 5]
+maximum = reduce(max, numbers)
+print(maximum)
+
+# checking if all values are true:
+
+
+def all_true(a, b):
+    return a and b
+
+
+values = [True, True, True, True, True]
+all_true = reduce(all_true, values)
+print(all_true)
+
+# checking if any values are true
+
+
+def any_true(a, b):
+    return a or b
+
+
+values = [False, False, False, False, True]
+any_true = reduce(any_true, values)
+print(any_true)
