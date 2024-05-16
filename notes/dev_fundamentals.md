@@ -40,3 +40,6 @@ character = {
   - try things to test what you are learning
   - don't just watch the videos; try things and see how they work
 
+6. Pros and cons of libraries
+  - make sure you are using GOOD packages
+  - ask yourself if you can write something yourself instead of pulling something else in
