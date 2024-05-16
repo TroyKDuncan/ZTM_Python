@@ -25,7 +25,7 @@ line = ['Troy','Taylor','Nora','Milo']
 character = {
   'name': 'Troy',
   'inventory': ['sword','axe','scroll','shield','potion'],
-  'race': 'khajit',
+  'race': 'khajiit',
   'height': 2, # in meters
   'speed': 45
 }
