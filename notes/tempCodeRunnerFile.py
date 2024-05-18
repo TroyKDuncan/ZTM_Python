@@ -1,4 +1,4 @@
-@performance
+# @performance
 # def long_function():
 #     print('1')
 #     for i in range(100000000):
