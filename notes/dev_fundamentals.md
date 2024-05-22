@@ -18,7 +18,7 @@
   - lists have order, but dictionaries don't
   - a line of people would probably work better with a list:
 
-line = ['Troy','Taylor','Nora','Milo']
+```line = ['Troy','Taylor','Nora','Milo']```
 
   - dictionaries hold a lot more information
 
@@ -43,3 +43,7 @@ character = {
 6. Pros and cons of libraries
   - make sure you are using GOOD packages
   - ask yourself if you can write something yourself instead of pulling something else in
+
+7. Pick the RIGHT library
+  - it should have lots of community support (stars, forks, updates, etc)
+
